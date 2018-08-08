@@ -19,6 +19,6 @@ WORKDIR $JETTY_BASE
 
 RUN set -xe  && java -jar "$JETTY_HOME/start.jar" --create-startd --add-to-start="server,http,https,deploy,jsp,jstl,ext,resources,websocket" 
 
-EXPOSE 8080
+EXPOSE 8080 8443
 
 CMD ["java","-jar","/opt/jetty/start.jar"]
