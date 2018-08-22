@@ -17,7 +17,7 @@ RUN  mkdir   -p "$JETTY_BASE"
 
 WORKDIR $JETTY_BASE 
 
-RUN set -xe  && java -jar "$JETTY_HOME/start.jar" --create-startd --add-to-start="server,http,https,deploy,jsp,jstl,ext,resources,websocket" 
+RUN set -xe  && java -jar "$JETTY_HOME/start.jar" --create-startd --add-to-start="server,http,https,deploy,jsp,jstl,ext,resources,websocket,logging-logback" 
 
 EXPOSE 8080 8443
 
