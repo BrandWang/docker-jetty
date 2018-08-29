@@ -21,4 +21,4 @@ RUN set -xe  && java -jar "$JETTY_HOME/start.jar" --create-startd --add-to-start
 
 EXPOSE 8080 8443
 
-CMD ["java","-jar"," -Dorg.eclipse.jetty.util.URI.charset=GBK","/opt/jetty/start.jar"]
+CMD ["java -Dorg.eclipse.jetty.util.URI.charset=GBK","-jar","/opt/jetty/start.jar"]
