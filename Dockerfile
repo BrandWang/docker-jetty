@@ -17,8 +17,8 @@ RUN  mkdir   -p "$JETTY_BASE"
 
 WORKDIR $JETTY_BASE 
 
-RUN set -xe  && java -jar "$JETTY_HOME/start.jar" --create-startd --add-to-start="server,http,https,deploy,jsp,jstl,ext,resources,websocket,logging-logback" 
+RUN set -xe  && java -jar "$JETTY_HOME/start.jar" --create-startd --add-to-start="server,http,https,deploy,jsp,jstl,ext,resources,websocket" 
 
 EXPOSE 8080 8443
 
-CMD ["java","-jar","/opt/jetty/start.jar"]
+CMD ["java","-jar"," -Dorg.eclipse.jetty.util.URI.charset=GBK","/opt/jetty/start.jar"]
